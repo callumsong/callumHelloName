@@ -27,10 +27,10 @@ module.exports = function(grunt){
     jscs: {
       all: {
         options: {
-          "standard": "google"
+          "standard": "Jquery"
         },
         files: {
-          src: ['Gruntfile.js', 'greet.js', 'test/**/*.js']
+          src: ['Gruntfile.js', 'greet.js', 'test/greet_test.js']
         }
       }
     }
@@ -38,6 +38,5 @@ module.exports = function(grunt){
   grunt.registerTask('test', ['simplemocha']);
   grunt.registerTask('syntax', ['jshint']);
   grunt.registerTask('spy', ['watch']);
-  grunt.registerTask('jscs', ['jscs']);
   grunt.registerTask('default', ['test', 'syntax']);
 };
